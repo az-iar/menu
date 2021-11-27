@@ -44,11 +44,11 @@ class MenuTest extends TestCase
     public function test_can_create_named_menu()
     {
         $menu = Menu::create('profile');
-        $menu->addItem(new Profile);
+        $menu->addItem(new Profile, 'profile');
 
-        $this->assertCount(1, $menu->get());
+        $this->assertCount(1, $menu->get('profile'));
 
-        $item = $menu->get()[0];
+        $item = $menu->get('profile')[0];
 
         $this->assertArrayHasKey('id', $item);
         $this->assertArrayHasKey('href', $item);

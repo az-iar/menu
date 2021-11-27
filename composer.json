@@ -29,6 +29,9 @@
   "scripts": {
     "post-autoload-dump": [
       "@php ./vendor/bin/testbench package:discover --ansi"
+    ],
+    "test": [
+      "@php ./vendor/bin/phpunit"
     ]
   },
   "extra": {
