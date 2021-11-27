@@ -10,11 +10,15 @@ class Menu implements MenuContract
 {
     private array $menu = [];
 
+    private string $current;
+
     public function create($menu = 'default'): self
     {
         if (!array_key_exists($menu, $this->menu)) {
             $this->menu[$menu] = [];
         }
+
+        $this->current = $menu;
 
         return $this;
     }
@@ -22,8 +26,10 @@ class Menu implements MenuContract
     /**
      * @throws \Inneuron\Menu\Exceptions\MenuNotExist
      */
-    public function addItem(MenuItem $item, $menu = 'default'): self
+    public function addItem(MenuItem $item, $menu = null): self
     {
+        $menu = $menu ?? $this->current;
+
         $this->checkMenuExists($menu);
 
         $items = $this->menu[$menu];
