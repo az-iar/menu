@@ -1,4 +1,4 @@
-# NavMenu
+# Menu
 
 Simple menu builder for Laravel
 
