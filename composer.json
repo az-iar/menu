@@ -1,0 +1,47 @@
+{
+  "name": "az-iar/menu",
+  "description": "Menu builder",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Azri Ismail",
+      "email": "mazri.iar@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^8.0",
+    "laravel/framework": "^8.73"
+  },
+  "require-dev": {
+    "orchestra/testbench": "^6.23",
+    "orchestra/canvas": "^6.10"
+  },
+  "autoload": {
+    "psr-4": {
+      "Inneuron\\Menu\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Inneuron\\Menu\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "post-autoload-dump": [
+      "@php ./vendor/bin/testbench package:discover --ansi"
+    ]
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Inneuron\\Menu\\MenuServiceProvider"
+      ],
+      "aliases": {
+        "Menu": "Inneuron\\Menu\\Facades\\Menu"
+      }
+    }
+  },
+  "config": {
+    "sort-packages": true
+  }
+}

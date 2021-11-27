@@ -1,0 +1,15 @@
+preset: package
+
+namespace: Inneuron\Menu
+
+paths:
+  src: src
+
+console:
+  namespace: Inneuron\Menu\Console
+
+provider:
+  namespace: Inneuron\Menu\Providers
+
+testing:
+  namespace: Inneuron\Menu\Tests
