@@ -44,7 +44,7 @@ class MenuTest extends TestCase
     public function test_can_create_named_menu()
     {
         $menu = Menu::create('profile');
-        $menu->addItem(new Profile, 'profile');
+        $menu->addItem(new Profile);
 
         $this->assertCount(1, $menu->get('profile'));
 
