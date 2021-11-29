@@ -37,7 +37,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "Inneuron\\Menu\\MenuServiceProvider"
+        "Inneuron\\Menu\\Providers\\MenuServiceProvider"
       ],
       "aliases": {
         "Menu": "Inneuron\\Menu\\Facades\\Menu"
