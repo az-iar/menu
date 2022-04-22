@@ -17,6 +17,8 @@ interface MenuItem
     public function current(): bool;
 
     public function children(): array;
+    
+    public function target(): string;
 
     public function toArray(): array;
 }
