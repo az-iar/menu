@@ -32,6 +32,11 @@ trait AsMenuItem
     {
         return false;
     }
+    
+    public function target(): string
+    {
+        return '_self';   
+    }
 
     public function toArray(): array
     {
@@ -41,6 +46,7 @@ trait AsMenuItem
             'href' => $this->href(),
             'icon' => $this->icon(),
             'current' => $this->current(),
+            'target' => $this->target(),
             'children' => collect($this->children())
                 ->filter(function (MenuItem $item) {
                     return $item->authorize();
